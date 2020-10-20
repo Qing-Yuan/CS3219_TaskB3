@@ -1,7 +1,14 @@
+language: node_js
+node_js:
+  - 12
+
+install:
+  - curl -sf https://up.apex.sh.install | sudo sh
+
 deploy:
-  provider: lambda
-  function_name: "lambda-test"
-  region: "us-east-1"
-  role: "arn:aws:iam::0123456789012:role/lambda_basic_execution"
-  runtime: "nodejs12.x"
-  handler_name: "handler.taskB3"
+  provider: script
+  script:
+    yarn;
+    up deploy
+  on:
+    all_branches: true
