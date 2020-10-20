@@ -8,6 +8,7 @@ install:
 deploy:
   provider: script
   script:
+    echo 'Tests skipped'
     up deploy
   on:
     all_branches: true
