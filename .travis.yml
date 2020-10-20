@@ -2,13 +2,12 @@ language: node_js
 node_js:
   - 12
 
-install:
-  - curl -sf https://up.apex.sh.install | sudo sh
+install: true
 
 deploy:
   provider: script
   script:
-    echo 'Tests skipped'
+    curl -sf https://up.apex.sh.install | sudo sh
     up deploy
   on:
     all_branches: true
