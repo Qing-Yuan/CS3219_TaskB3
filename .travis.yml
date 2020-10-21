@@ -4,10 +4,12 @@ node_js:
 
 install:
   - curl -sf https://up.apex.sh/install | sudo sh
+  - npm install -g serverless
 
 deploy:
   - provider: script
     script:
-      up deploy
+      # up deploy
+      serverless deploy
     on:
       all_branches: true
