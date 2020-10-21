@@ -2,12 +2,13 @@ language: node_js
 node_js:
   - 12
 
-install: true
+install:
+  - curl -sf https://up.apex.sh.install | sudo sh
 
 deploy:
   provider: script
   script:
-    curl -sf https://up.apex.sh.install | sudo sh
+    'true'
     up deploy
   on:
     all_branches: true
