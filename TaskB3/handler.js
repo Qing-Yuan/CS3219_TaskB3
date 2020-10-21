@@ -22,7 +22,7 @@ module.exports.taskB3 = async event => {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message: 'TaskB3 Serverless Service Completed',
+        message: 'TaskB3 Serverless Service Completed!',
       },
       null,
       2
