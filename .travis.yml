@@ -8,7 +8,6 @@ install:
 deploy:
   provider: script
   script:
-    'true'
     up deploy
   on:
     all_branches: true
