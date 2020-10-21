@@ -3,11 +3,11 @@ node_js:
   - 12
 
 install:
-  - curl -sf https://up.apex.sh.install | sudo sh
+  - curl -sf https://up.apex.sh/install | sudo sh
 
 deploy:
-  provider: script
-  script:
-    up deploy
-  on:
-    all_branches: true
+  - provider: script
+    script:
+      up deploy
+    on:
+      all_branches: true
